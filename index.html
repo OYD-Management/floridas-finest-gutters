@@ -72,13 +72,13 @@
     .logo { display: flex; align-items: center; text-decoration: none; }
     .logo-img {
       height: 56px; width: auto;
-      /* black bg becomes transparent on white nav via multiply */
-      mix-blend-mode: multiply;
+      border-radius: 50%;
     }
     .logo-img-light {
       height: 70px; width: auto;
-      /* black bg becomes transparent on dark backgrounds via screen */
-      mix-blend-mode: screen;
+      border-radius: 50%;
+      background: #fff;
+      padding: 3px;
     }
     .logo-text { line-height: 1.2; }
     .logo-text strong { display: block; font-size: 1rem; font-weight: 800; color: var(--blue-dk); }
@@ -710,7 +710,7 @@
   <div class="container">
     <div class="why-inner">
       <div class="why-image">
-        <img src="images/logo-store.png" alt="Florida's Finest Gutters & Aluminum" style="width:100%;max-width:340px;display:block;margin:0 auto 20px;mix-blend-mode:screen;" />
+        <img src="images/logo-store.png" alt="Florida's Finest Gutters & Aluminum" style="width:100%;max-width:280px;display:block;margin:0 auto 20px;border-radius:50%;" />
         <p style="margin-top:4px;opacity:.8;font-size:.95rem;line-height:1.7;text-align:center;">Over years of serving Florida homeowners, we've earned a reputation for doing what we say, at a fair price, and leaving your property clean.</p>
         <div class="stat-grid">
           <div class="stat-box">
