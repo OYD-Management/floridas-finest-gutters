@@ -199,7 +199,6 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
       gap: 16px;
       margin-top: 56px;
     }
@@ -208,12 +207,12 @@
       background: var(--gray-200); cursor: pointer;
     }
     .gallery-item:first-child {
-      grid-column: span 2; grid-row: span 1;
+      grid-column: span 2;
     }
     .gallery-item img {
       width: 100%; height: 100%; object-fit: cover; display: block;
       transition: transform .4s ease;
-      min-height: 260px;
+      min-height: 240px;
     }
     .gallery-item:hover img { transform: scale(1.04); }
     .gallery-caption {
@@ -224,13 +223,17 @@
       transition: opacity .3s;
     }
     .gallery-item:hover .gallery-caption { opacity: 1; }
-    .gallery-placeholder {
-      width: 100%; min-height: 260px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 10px;
-      background: var(--gray-100); color: var(--gray-600); font-size: .85rem; text-align: center; padding: 16px;
-      border: 2px dashed var(--gray-200); border-radius: var(--radius);
+    .gallery-item.hidden { display: none; }
+    .gallery-show-more {
+      grid-column: 1 / -1; text-align: center; margin-top: 8px;
     }
-    .gallery-placeholder svg { width: 36px; height: 36px; opacity: .4; }
+    .gallery-show-more button {
+      background: transparent; border: 2px solid var(--blue);
+      color: var(--blue); font-weight: 700; font-size: .95rem;
+      padding: 12px 32px; border-radius: 8px; cursor: pointer;
+      transition: all .2s;
+    }
+    .gallery-show-more button:hover { background: var(--blue); color: #fff; }
 
     /* Lightbox */
     .lightbox {
@@ -782,26 +785,93 @@
       <h2 class="section-title">Real Jobs. Real Results.</h2>
       <p class="section-sub">Every photo is from an actual Anthony job — seamless gutters, aluminum work, awnings, and more across Pasco, Pinellas &amp; Manatee County.</p>
     </div>
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="galleryGrid">
       <div class="gallery-item" onclick="openLightbox(0)">
-        <img src="images/job1.jpg" alt="Dark seamless gutter installation on modern home with stone accents" loading="lazy" />
-        <div class="gallery-caption">Seamless Black Gutters · Modern Home</div>
+        <img src="images/seamless-gutters-installed.jpg" alt="Seamless gutters installed on Florida home" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install · Florida Home</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(1)">
-        <img src="images/job2.jpg" alt="Dark gutter and downspout installation on Florida stucco home" loading="lazy" />
-        <div class="gallery-caption">Gutter &amp; Downspout · Stucco Home</div>
+        <img src="images/soffit-facia-seamless.jpg" alt="Soffit, fascia and seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Soffit · Fascia · Seamless Gutters</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(2)">
-        <img src="images/job3.jpg" alt="White gutter installation on Florida ranch home with palm trees" loading="lazy" />
-        <div class="gallery-caption">Gutter Installation · Florida Ranch Home</div>
+        <img src="images/seamless-gutter-mvp-1.jpg" alt="Seamless gutter MVP installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(3)">
-        <img src="images/job4.jpg" alt="Aluminum awning and carport installation with white posts" loading="lazy" />
-        <div class="gallery-caption">Aluminum Awning Installation</div>
+        <img src="images/gutter-guards.jpg" alt="Gutter guards installation" loading="lazy" />
+        <div class="gallery-caption">Gutter Guards Installation</div>
       </div>
       <div class="gallery-item" onclick="openLightbox(4)">
-        <img src="images/job5.jpg" alt="Pool screen enclosure repair and soffit work in progress" loading="lazy" />
-        <div class="gallery-caption">Pool Enclosure &amp; Soffit Work</div>
+        <img src="images/screen-aluminum-enclosure.jpg" alt="Screen and aluminum enclosure" loading="lazy" />
+        <div class="gallery-caption">Screen &amp; Aluminum Enclosure</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="images/soffit-facia-gutter.jpg" alt="Soffit, fascia and gutter work" loading="lazy" />
+        <div class="gallery-caption">Soffit · Fascia · Gutter</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(6)">
+        <img src="images/drip-edge-gutters.jpg" alt="Drip edge and gutter installation" loading="lazy" />
+        <div class="gallery-caption">Drip Edge &amp; Gutters</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(7)">
+        <img src="images/gutter-install-seamless.jpg" alt="Seamless gutter install in progress" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(8)">
+        <img src="images/seamless-soffit-facia-mvp.jpg" alt="Seamless gutter, soffit and fascia MVP" loading="lazy" />
+        <div class="gallery-caption">Seamless · Soffit · Fascia</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(9)">
+        <img src="images/seamless-gutter-mvp-3.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(10)">
+        <img src="images/seamless-gutter-mvp-4.jpg" alt="Seamless gutter on home exterior" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutters · Home Exterior</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(11)">
+        <img src="images/seamless-facia-metal.jpg" alt="Seamless gutter, fascia and metal work" loading="lazy" />
+        <div class="gallery-caption">Seamless · Fascia · Metal</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(12)">
+        <img src="images/seamless-gutter-2.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(13)">
+        <img src="images/seamless-gutters-soffit.jpg" alt="Seamless gutters and soffit" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutters &amp; Soffit</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(14)">
+        <img src="images/seamless-gutters-4.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(15)">
+        <img src="images/seamless-white-gutter.jpg" alt="White seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">White Seamless Gutters</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(16)">
+        <img src="images/soffit-gutter-2.jpg" alt="Soffit and gutter installation" loading="lazy" />
+        <div class="gallery-caption">Soffit &amp; Gutter</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(17)">
+        <img src="images/more-seamless-installs.jpg" alt="Multiple seamless gutter installs" loading="lazy" />
+        <div class="gallery-caption">More Seamless Installs</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(18)">
+        <img src="images/seamless-gutter-3.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(19)">
+        <img src="images/roll-form-gutter-finished.jpg" alt="Roll form gutter finished install" loading="lazy" />
+        <div class="gallery-caption">Roll Form Gutter · Finished</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(20)">
+        <img src="images/gutter-job-6898.jpg" alt="Completed gutter job" loading="lazy" />
+        <div class="gallery-caption">Completed Gutter Job</div>
+      </div>
+      <div class="gallery-show-more" id="galleryShowMore">
+        <button onclick="showAllGallery()">View All Photos (21)</button>
       </div>
     </div>
   </div>
@@ -1499,12 +1569,32 @@
 
   // ── LIGHTBOX ──
   const galleryItems = [
-    { src: 'images/job1.jpg', caption: 'Seamless Black Gutters · Modern Home' },
-    { src: 'images/job2.jpg', caption: 'Gutter & Downspout · Stucco Home' },
-    { src: 'images/job3.jpg', caption: 'Gutter Installation · Florida Ranch Home' },
-    { src: 'images/job4.jpg', caption: 'Aluminum Awning Installation' },
-    { src: 'images/job5.jpg', caption: 'Pool Enclosure & Soffit Work' },
+    { src: 'images/seamless-gutters-installed.jpg', caption: 'Seamless Gutter Install · Florida Home' },
+    { src: 'images/soffit-facia-seamless.jpg', caption: 'Soffit · Fascia · Seamless Gutters' },
+    { src: 'images/seamless-gutter-mvp-1.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/gutter-guards.jpg', caption: 'Gutter Guards Installation' },
+    { src: 'images/screen-aluminum-enclosure.jpg', caption: 'Screen & Aluminum Enclosure' },
+    { src: 'images/soffit-facia-gutter.jpg', caption: 'Soffit · Fascia · Gutter' },
+    { src: 'images/drip-edge-gutters.jpg', caption: 'Drip Edge & Gutters' },
+    { src: 'images/gutter-install-seamless.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/seamless-soffit-facia-mvp.jpg', caption: 'Seamless · Soffit · Fascia' },
+    { src: 'images/seamless-gutter-mvp-3.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/seamless-gutter-mvp-4.jpg', caption: 'Seamless Gutters · Home Exterior' },
+    { src: 'images/seamless-facia-metal.jpg', caption: 'Seamless · Fascia · Metal' },
+    { src: 'images/seamless-gutter-2.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/seamless-gutters-soffit.jpg', caption: 'Seamless Gutters & Soffit' },
+    { src: 'images/seamless-gutters-4.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/seamless-white-gutter.jpg', caption: 'White Seamless Gutters' },
+    { src: 'images/soffit-gutter-2.jpg', caption: 'Soffit & Gutter' },
+    { src: 'images/more-seamless-installs.jpg', caption: 'More Seamless Installs' },
+    { src: 'images/seamless-gutter-3.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/roll-form-gutter-finished.jpg', caption: 'Roll Form Gutter · Finished' },
+    { src: 'images/gutter-job-6898.jpg', caption: 'Completed Gutter Job' },
   ];
+  function showAllGallery() {
+    document.querySelectorAll('.gallery-item.hidden').forEach(el => el.classList.remove('hidden'));
+    document.getElementById('galleryShowMore').style.display = 'none';
+  }
   let currentIdx = 0;
   function openLightbox(idx) {
     currentIdx = idx;
