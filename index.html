@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florida's Finest Gutters & Aluminum | Pasco, Pinellas & Manatee County</title>
+  <meta name="description" content="Florida's Finest Gutters & Aluminum — expert gutter installation, repair & cleaning in Pasco, Pinellas & Manatee County. 5.0 stars, 18 reviews. Call (727) 308-8540 for a free estimate!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:    #1a4fa0;
+      --blue-dk: #0f2f66;
+      --gold:    #f5a623;
+      --gold-lt: #ffd270;
+      --white:   #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100:#f1f5f9;
+      --gray-200:#e2e8f0;
+      --gray-600:#475569;
+      --gray-800:#1e293b;
+      --green:   #16a34a;
+      --radius:  12px;
+      --shadow:  0 4px 24px rgba(0,0,0,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-800); background: #fff; }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--blue-dk);
+      font-weight: 700; font-size: 1rem; padding: 14px 28px;
+      border-radius: 8px; border: none; cursor: pointer;
+      text-decoration: none; transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--white);
+      font-weight: 700; font-size: 1rem; padding: 13px 28px;
+      border-radius: 8px; border: 2px solid rgba(255,255,255,.6); cursor: pointer;
+      text-decoration: none; transition: all .2s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+    .stars { color: var(--gold); letter-spacing: 2px; font-size: 1.1rem; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--blue-dk); color: rgba(255,255,255,.85);
+      font-size: .85rem; padding: 8px 0;
+    }
+    .topbar .container {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+    }
+    .topbar a { color: var(--gold-lt); text-decoration: none; font-weight: 600; }
+
+    /* ── NAVBAR ── */
+    nav {
+      background: var(--white); box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px; max-width: 1160px; margin: 0 auto;
+    }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo-img {
+      height: 56px; width: auto;
+      /* black bg becomes transparent on white nav via multiply */
+      mix-blend-mode: multiply;
+    }
+    .logo-img-light {
+      height: 70px; width: auto;
+      /* black bg becomes transparent on dark backgrounds via screen */
+      mix-blend-mode: screen;
+    }
+    .logo-text { line-height: 1.2; }
+    .logo-text strong { display: block; font-size: 1rem; font-weight: 800; color: var(--blue-dk); }
+    .logo-text span { font-size: .78rem; color: var(--gray-600); }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray-800); font-weight: 500; font-size: .95rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+    .phone-link { font-weight: 700; color: var(--blue); text-decoration: none; font-size: 1rem; }
+    .phone-link:hover { color: var(--blue-dk); }
+
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; border-radius: 2px; transition: all .3s; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 60%, #2563b0 100%);
+      color: var(--white); padding: 96px 0 80px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    .hero-inner {
+      position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,166,35,.15); border: 1px solid rgba(245,166,35,.4);
+      color: var(--gold-lt); font-size: .85rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p { font-size: 1.1rem; opacity: .88; line-height: 1.7; margin-bottom: 36px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .trust-strip {
+      display: flex; gap: 24px; flex-wrap: wrap; margin-top: 48px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: .9rem; opacity: .9; }
+    .trust-item svg { width: 20px; height: 20px; fill: var(--gold); flex-shrink: 0; }
+
+    .hero-card {
+      background: rgba(255,255,255,.08); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 20px;
+      padding: 36px; text-align: center;
+    }
+    .rating-big { font-size: 4rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .rating-label { font-size: .95rem; opacity: .8; margin: 8px 0 4px; }
+    .hero-card .stars { font-size: 1.6rem; }
+    .review-count { font-size: .9rem; opacity: .7; margin-top: 6px; margin-bottom: 28px; }
+    .mini-review {
+      background: rgba(255,255,255,.1); border-radius: 12px; padding: 16px; text-align: left;
+      font-size: .88rem; line-height: 1.6; font-style: italic; margin-bottom: 12px;
+    }
+    .mini-review-author { font-weight: 600; font-style: normal; margin-top: 8px; opacity: .8; font-size: .82rem; }
+
+    /* ── SERVICES ── */
+    .services { padding: 96px 0; background: var(--gray-50); }
+    .section-label {
+      font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 10px;
+    }
+    .section-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: var(--gray-800); margin-bottom: 16px; }
+    .section-sub { color: var(--gray-600); font-size: 1.05rem; line-height: 1.7; max-width: 560px; }
+    .section-head { margin-bottom: 56px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius); padding: 32px;
+      box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s;
+      border-bottom: 4px solid transparent;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.16); border-bottom-color: var(--blue); }
+    .service-icon {
+      width: 56px; height: 56px; background: linear-gradient(135deg, var(--blue) 0%, #3b82f6 100%);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    }
+    .service-icon svg { width: 28px; height: 28px; fill: #fff; }
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+    .service-card p { color: var(--gray-600); font-size: .93rem; line-height: 1.65; }
+
+    /* ── WHY US ── */
+    .why { padding: 96px 0; }
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-image {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dk) 100%);
+      border-radius: 20px; padding: 48px 36px; color: var(--white); position: relative; overflow: hidden;
+    }
+    .why-image::after {
+      content: ''; position: absolute; right: -40px; bottom: -40px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(255,255,255,.06);
+    }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+    .stat-box { background: rgba(255,255,255,.12); border-radius: 12px; padding: 20px; text-align: center; }
+    .stat-num { font-size: 2.2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .stat-lbl { font-size: .82rem; opacity: .8; margin-top: 6px; }
+    .why-points { display: flex; flex-direction: column; gap: 28px; }
+    .why-point { display: flex; gap: 16px; align-items: flex-start; }
+    .why-point-icon {
+      width: 44px; height: 44px; min-width: 44px; background: var(--blue); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .why-point-icon svg { width: 22px; height: 22px; fill: #fff; }
+    .why-point h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .why-point p { color: var(--gray-600); font-size: .92rem; line-height: 1.6; }
+
+    /* ── GALLERY ── */
+    .gallery { padding: 96px 0; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+      margin-top: 56px;
+    }
+    .gallery-item {
+      position: relative; overflow: hidden; border-radius: var(--radius);
+      background: var(--gray-200); cursor: pointer;
+    }
+    .gallery-item:first-child {
+      grid-column: span 2; grid-row: span 1;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .4s ease;
+      min-height: 260px;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.65));
+      color: #fff; padding: 28px 16px 14px;
+      font-size: .85rem; font-weight: 600; opacity: 0;
+      transition: opacity .3s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+    .gallery-placeholder {
+      width: 100%; min-height: 260px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+      background: var(--gray-100); color: var(--gray-600); font-size: .85rem; text-align: center; padding: 16px;
+      border: 2px dashed var(--gray-200); border-radius: var(--radius);
+    }
+    .gallery-placeholder svg { width: 36px; height: 36px; opacity: .4; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,.9); align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 8px; object-fit: contain; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 28px; color: #fff; font-size: 2.4rem;
+      background: none; border: none; cursor: pointer; line-height: 1;
+    }
+    .lightbox-prev, .lightbox-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      color: #fff; font-size: 2rem; background: rgba(255,255,255,.1);
+      border: none; cursor: pointer; padding: 12px 18px; border-radius: 8px;
+      transition: background .2s;
+    }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,.2); }
+    .lightbox-caption {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,.8); font-size: .9rem; text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:first-child { grid-column: span 2; }
+    }
+    @media (max-width: 500px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: span 1; }
+    }
+
+    /* ── REVIEWS ── */
+    .reviews { padding: 96px 0; background: var(--gray-50); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 56px; }
+    .review-card {
+      background: var(--white); border-radius: var(--radius); padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .reviewer-avatar {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: 1rem; flex-shrink: 0;
+    }
+    .reviewer-name { font-weight: 700; font-size: .95rem; }
+    .reviewer-meta { font-size: .8rem; color: var(--gray-600); margin-top: 2px; }
+    .review-text { color: var(--gray-600); font-size: .92rem; line-height: 1.7; font-style: italic; }
+    .review-stars { margin-bottom: 10px; }
+    .google-badge {
+      display: flex; align-items: center; gap: 6px; margin-top: 16px;
+      font-size: .78rem; color: var(--gray-600);
+    }
+    .g-logo { width: 16px; height: 16px; }
+
+    /* ── PROCESS ── */
+    .process { padding: 96px 0; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative; }
+    .process-steps::before {
+      content: ''; position: absolute; top: 32px; left: calc(12.5% + 16px); right: calc(12.5% + 16px);
+      height: 2px; background: var(--gray-200); z-index: 0;
+    }
+    .process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .step-num {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--blue); color: #fff; font-weight: 800; font-size: 1.4rem;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+      border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--blue);
+    }
+    .process-step h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: var(--gray-600); font-size: .88rem; line-height: 1.6; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%);
+      color: var(--white); padding: 80px 0; text-align: center;
+    }
+    .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; margin-bottom: 16px; }
+    .cta-banner p { font-size: 1.1rem; opacity: .85; margin-bottom: 40px; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── CONTACT FORM ── */
+    .contact { padding: 96px 0; background: var(--gray-50); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
+    .contact-info p { color: var(--gray-600); line-height: 1.7; margin-bottom: 32px; }
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+    .contact-detail { display: flex; align-items: center; gap: 14px; }
+    .contact-detail-icon {
+      width: 44px; height: 44px; background: var(--blue); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-detail-icon svg { width: 22px; height: 22px; fill: #fff; }
+    .contact-detail strong { display: block; font-size: .9rem; color: var(--gray-600); margin-bottom: 2px; }
+    .contact-detail a, .contact-detail span { font-weight: 600; color: var(--gray-800); text-decoration: none; }
+    .contact-detail a:hover { color: var(--blue); }
+
+    .form-card {
+      background: var(--white); border-radius: 20px; padding: 40px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.1);
+    }
+    .form-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+    .form-card .sub { color: var(--gray-600); font-size: .92rem; margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--gray-800); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-200);
+      border-radius: 8px; font-size: .95rem; font-family: inherit; color: var(--gray-800);
+      transition: border-color .2s, box-shadow .2s; background: var(--white);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,79,160,.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%; padding: 16px; background: var(--blue); color: #fff;
+      font-size: 1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;
+      transition: background .2s, transform .15s; margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--blue-dk); transform: translateY(-1px); }
+    .form-submit:active { transform: translateY(0); }
+    .form-note { font-size: .8rem; color: var(--gray-600); text-align: center; margin-top: 12px; }
+
+    #form-success {
+      display: none; background: #ecfdf5; border: 1px solid #86efac; border-radius: 12px;
+      padding: 24px; text-align: center; color: var(--green);
+    }
+    #form-success svg { width: 40px; height: 40px; fill: var(--green); margin-bottom: 10px; }
+    #form-success h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    #form-success p { font-size: .92rem; color: #166534; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--blue-dk); color: rgba(255,255,255,.75); padding: 56px 0 32px;
+    }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo-text strong { color: #fff; }
+    .footer-brand .logo-text span { color: rgba(255,255,255,.6); }
+    .footer-brand p { font-size: .9rem; line-height: 1.7; margin-top: 16px; color: rgba(255,255,255,.65); }
+    .footer-stars { color: var(--gold); margin-top: 12px; font-size: 1rem; }
+    .footer-col h4 { font-size: .95rem; font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col li a { color: rgba(255,255,255,.65); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    .footer-col li a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+      font-size: .83rem; color: rgba(255,255,255,.45);
+    }
+
+    /* ── FORM MODAL ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 600;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff; border-radius: 20px; padding: 40px;
+      width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3); position: relative;
+      animation: modalIn .25s ease;
+    }
+    @keyframes modalIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .modal-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; font-size: 1.6rem; cursor: pointer;
+      color: var(--gray-600); line-height: 1;
+    }
+    .modal-close:hover { color: var(--gray-800); }
+    .modal-header { margin-bottom: 24px; }
+    .modal-stars { color: var(--gold); font-size: 1rem; margin-bottom: 6px; }
+    .modal-header h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+    .modal-header p { color: var(--gray-600); font-size: .92rem; }
+
+    /* ── VOICE AI WIDGET ── */
+    .voice-fab {
+      position: fixed; bottom: 28px; right: 24px; z-index: 300;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+    }
+    .voice-fab-btn {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue) 0%, #2563b0 100%);
+      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(26,79,160,.5); transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+    .voice-fab-btn:hover { transform: scale(1.08); box-shadow: 0 8px 32px rgba(26,79,160,.6); }
+    .voice-fab-btn svg { width: 28px; height: 28px; fill: #fff; }
+    .voice-fab-btn .pulse-ring {
+      position: absolute; inset: -6px; border-radius: 50%;
+      border: 3px solid rgba(26,79,160,.4); animation: pulseRing 2s ease-out infinite;
+    }
+    .voice-fab-btn .pulse-ring2 {
+      position: absolute; inset: -13px; border-radius: 50%;
+      border: 2px solid rgba(26,79,160,.2); animation: pulseRing 2s ease-out infinite .6s;
+    }
+    @keyframes pulseRing { 0%{transform:scale(.9);opacity:1} 100%{transform:scale(1.3);opacity:0} }
+    .voice-label {
+      background: var(--blue-dk); color: #fff; font-size: .76rem; font-weight: 700;
+      padding: 5px 12px; border-radius: 100px; white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
+    .voice-panel {
+      display: none; position: fixed; bottom: 108px; right: 24px; z-index: 301;
+      width: 340px; background: #fff; border-radius: 20px;
+      box-shadow: 0 12px 48px rgba(0,0,0,.2); overflow: hidden; flex-direction: column;
+      animation: slideUp .25s ease;
+    }
+    .voice-panel.open { display: flex; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+    .voice-panel-header {
+      background: linear-gradient(135deg, var(--blue-dk), var(--blue));
+      color: #fff; padding: 16px 20px; display: flex; align-items: center; gap: 12px;
+    }
+    .ai-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .ai-avatar svg { width: 22px; height: 22px; fill: #fff; }
+    .voice-panel-header h4 { font-size: .95rem; font-weight: 700; margin-bottom: 2px; }
+    .voice-panel-header span { font-size: .75rem; opacity: .8; }
+    .online-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; margin-left: auto; flex-shrink: 0; box-shadow: 0 0 6px #4ade80; animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .voice-panel-close { background:none;border:none;cursor:pointer;color:rgba(255,255,255,.8);font-size:1.2rem;line-height:1;padding:2px; }
+    .voice-messages {
+      flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px;
+      max-height:260px; min-height:160px; background:var(--gray-50);
+    }
+    .msg { display:flex; gap:8px; align-items:flex-end; }
+    .msg.user { flex-direction:row-reverse; }
+    .msg-bubble { max-width:82%; padding:10px 14px; border-radius:16px; font-size:.87rem; line-height:1.5; }
+    .msg.ai .msg-bubble { background:#fff; color:var(--gray-800); border:1px solid var(--gray-200); border-bottom-left-radius:4px; }
+    .msg.user .msg-bubble { background:var(--blue); color:#fff; border-bottom-right-radius:4px; }
+    .msg-avatar { width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff; }
+    .msg.ai .msg-avatar { background:var(--blue); }
+    .msg.user .msg-avatar { background:var(--gray-600); }
+    .typing-dots { display:flex; gap:4px; padding:4px 2px; }
+    .typing-dots span { width:6px;height:6px;background:var(--gray-600);border-radius:50%;animation:dot .8s infinite; }
+    .typing-dots span:nth-child(2){animation-delay:.15s} .typing-dots span:nth-child(3){animation-delay:.3s}
+    @keyframes dot{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+    .voice-quick-btns { padding:10px 16px; display:flex; gap:6px; flex-wrap:wrap; background:#fff; border-top:1px solid var(--gray-200); }
+    .qbtn { font-size:.75rem;padding:5px 10px;border-radius:100px;border:1.5px solid var(--gray-200);background:#fff;cursor:pointer;color:var(--blue);font-weight:600;transition:all .15s;white-space:nowrap; }
+    .qbtn:hover { background:var(--blue);color:#fff;border-color:var(--blue); }
+    .voice-input-area { padding:12px 16px;border-top:1px solid var(--gray-200);background:#fff;display:flex;gap:8px;align-items:center; }
+    .voice-text-input { flex:1;border:1.5px solid var(--gray-200);border-radius:100px;padding:9px 16px;font-size:.87rem;font-family:inherit;outline:none;transition:border-color .2s; }
+    .voice-text-input:focus { border-color:var(--blue); }
+    .voice-send-btn { width:36px;height:36px;background:var(--blue);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s; }
+    .voice-send-btn:hover { background:var(--blue-dk); }
+    .voice-send-btn svg { width:16px;height:16px;fill:#fff; }
+    .voice-mic-btn { width:36px;height:36px;background:var(--gray-100);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s; }
+    .voice-mic-btn.listening { background:#fee2e2; }
+    .voice-mic-btn svg { width:16px;height:16px;fill:var(--gray-600); }
+    .voice-mic-btn.listening svg { fill:#dc2626; }
+
+    @media (max-width:600px) {
+      .voice-panel { width:calc(100vw - 32px); right:16px; bottom:90px; }
+      .voice-fab { bottom:76px; right:16px; }
+      .modal-box { padding:28px 20px; }
+    }
+
+    /* ── STICKY PHONE BAR (mobile) ── */
+    .sticky-phone {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      background: var(--blue); color: #fff; text-align: center; padding: 14px;
+      font-weight: 700; font-size: 1.05rem; text-decoration: none; box-shadow: 0 -4px 16px rgba(0,0,0,.2);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps::before { display: none; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .nav-links, .nav-cta .btn-primary { display: none; }
+      .hamburger { display: block; }
+      .sticky-phone { display: block; }
+      .contact-inner { gap: 40px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 64px 0 60px; }
+      .services, .why, .reviews, .process, .cta-banner, .contact { padding: 64px 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      footer { padding-bottom: 80px; }
+      .trust-strip { gap: 16px; }
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none; position: fixed; inset: 0; background: var(--blue-dk); z-index: 999;
+      flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { color: #fff; text-decoration: none; font-size: 1.4rem; font-weight: 700; }
+    .mobile-nav .close-btn {
+      position: absolute; top: 24px; right: 24px; background: none; border: none;
+      color: #fff; font-size: 2rem; cursor: pointer; line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span>⭐ 5.0 Stars on Google · 18 Reviews · Pasco, Pinellas &amp; Manatee County · Open 24 Hours</span>
+    <a href="tel:+17273088540">📞 (727) 308-8540 — FREE Estimate</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="Florida's Finest Gutters & Aluminum" class="logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+17273088540" class="phone-link">📞 (727) 308-8540</a>
+      <a href="#" onclick="openModal();return false;" class="btn-primary">Free Estimate</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#why-us" onclick="toggleMenu()">Why Us</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+  <a href="#process" onclick="toggleMenu()">Process</a>
+  <a href="#contact" onclick="toggleMenu()">Free Estimate</a>
+  <a href="tel:+17273088540" style="color:var(--gold);">📞 Call Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span>⭐</span> Pasco · Pinellas · Manatee County · Open 24 Hours
+        </div>
+        <h1>
+          Florida's <span>Finest</span><br/>
+          Gutters &amp;<br/>
+          Aluminum Work
+        </h1>
+        <p>
+          Expert gutter installation, repair, and cleaning to protect your home from water damage.
+          Serving Pasco, Pinellas &amp; Manatee County — fast, friendly, and affordable with
+          guaranteed satisfaction and a perfect 5-star rating.
+        </p>
+        <div class="hero-actions">
+          <a href="#" onclick="openModal();return false;" class="btn-primary">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Get Free Estimate
+          </a>
+          <a href="tel:+17273088540" class="btn-outline">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.002 8.18 2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Anthony Now
+          </a>
+        </div>
+        <div class="trust-strip">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Free Estimates
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Quality Guaranteed
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="rating-big">5.0</div>
+        <div class="stars">★★★★★</div>
+        <div class="rating-label">Google Rating</div>
+        <div class="review-count">Based on 18 verified reviews</div>
+        <div class="mini-review">
+          "Last week, Anthony replaced my soffit, fascia and installed gutters. What a beautiful job. I couldn't be happier with his work and the reasonable pricing."
+          <div class="mini-review-author">— Judy D.</div>
+        </div>
+        <div class="mini-review">
+          "Anthony was timely and efficient! He installed the new gutter piece professionally and also found a problem in my wall that I wasn't aware of."
+          <div class="mini-review-author">— Abner R.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Complete Gutter &amp; Aluminum Services</h2>
+      <p class="section-sub">From seamless gutters to full soffit and fascia replacement — we handle it all with professional craftsmanship and fair pricing.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+        </div>
+        <h3>Seamless Gutter Installation</h3>
+        <p>Custom-cut seamless gutters installed on-site for a perfect fit. No seams means fewer leaks and a cleaner look for your home.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3>Soffit &amp; Fascia Replacement</h3>
+        <p>Protect your roofline with professional soffit and fascia installation. We repair damage and upgrade to durable aluminum materials.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Aluminum Work</h3>
+        <p>Comprehensive aluminum fabrication and installation including panels, trim work, and custom aluminum products for residential properties.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Roofing &amp; Repairs</h3>
+        <p>From storm damage repairs to full roof replacements. Anthony goes above and beyond — including checking on your home before rain storms.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/><path d="M5 15l7 7 7-7"/></svg>
+        </div>
+        <h3>Gutter Guards &amp; Covers</h3>
+        <p>Keep gutters clear of debris with professional gutter guard installation. Reduce maintenance and extend the life of your gutter system.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Inspections &amp; Maintenance</h3>
+        <p>Proactive inspections to catch problems early. Anthony personally checks your property and communicates everything he finds — no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why-us">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-image">
+        <img src="images/logo-store.png" alt="Florida's Finest Gutters & Aluminum" style="width:100%;max-width:340px;display:block;margin:0 auto 20px;mix-blend-mode:screen;" />
+        <p style="margin-top:4px;opacity:.8;font-size:.95rem;line-height:1.7;text-align:center;">Over years of serving Florida homeowners, we've earned a reputation for doing what we say, at a fair price, and leaving your property clean.</p>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-num">5.0</div>
+            <div class="stat-lbl">Google Rating</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">18+</div>
+            <div class="stat-lbl">5-Star Reviews</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Job Satisfaction</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">Free</div>
+            <div class="stat-lbl">Estimates</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">What Makes Florida's Finest Different</h2>
+        <div class="why-points" style="margin-top:32px;">
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>Competitive, Honest Pricing</h4>
+              <p>Our customers consistently beat other estimates. No hidden fees — just fair pricing for quality work.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4>Spotless Workmanship</h4>
+              <p>Every job site is left clean. We respect your property and take pride in a job done right from start to finish.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Owner-Operated</h4>
+              <p>Anthony personally handles your project — you deal with the owner, not a subcontractor. Real accountability on every job.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <h4>Goes Above &amp; Beyond</h4>
+              <p>Anthony checks on homes before storms, spots hidden problems other contractors miss, and follows through on every promise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Real Jobs. Real Results.</h2>
+      <p class="section-sub">Every photo is from an actual Anthony job — seamless gutters, aluminum work, awnings, and more across Pasco, Pinellas &amp; Manatee County.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="images/job1.jpg" alt="Dark seamless gutter installation on modern home with stone accents" loading="lazy" />
+        <div class="gallery-caption">Seamless Black Gutters · Modern Home</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="images/job2.jpg" alt="Dark gutter and downspout installation on Florida stucco home" loading="lazy" />
+        <div class="gallery-caption">Gutter &amp; Downspout · Stucco Home</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="images/job3.jpg" alt="White gutter installation on Florida ranch home with palm trees" loading="lazy" />
+        <div class="gallery-caption">Gutter Installation · Florida Ranch Home</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="images/job4.jpg" alt="Aluminum awning and carport installation with white posts" loading="lazy" />
+        <div class="gallery-caption">Aluminum Awning Installation</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="images/job5.jpg" alt="Pool screen enclosure repair and soffit work in progress" loading="lazy" />
+        <div class="gallery-caption">Pool Enclosure &amp; Soffit Work</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="shiftLightbox(-1)">&#8592;</button>
+  <img id="lightbox-img" src="" alt="" />
+  <button class="lightbox-next" onclick="shiftLightbox(1)">&#8594;</button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Real reviews from Florida homeowners who trusted Anthony with their homes.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar">JD</div>
+          <div>
+            <div class="reviewer-name">Judy D.</div>
+            <div class="reviewer-meta">2 reviews · 5 photos</div>
+          </div>
+        </div>
+        <p class="review-text">"Last week, Anthony replaced my soffit, fascia and installed gutters. What a beautiful job. I couldn't be happier with his work and the reasonable pricing. I had gotten a couple other estimates and they were more than I was expecting to pay. The property was left clean and I highly recommend this company for your needs."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#2563b0;">BN</div>
+          <div>
+            <div class="reviewer-name">Brian Nees</div>
+            <div class="reviewer-meta">Local Guide · 74 reviews · 14 photos</div>
+          </div>
+        </div>
+        <p class="review-text">"Anthony did a great job on my roofing project. He went above and beyond my expectations for this job. Anthony is knowledgeable, and works hard to make it right."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#7c3aed;">AR</div>
+          <div>
+            <div class="reviewer-name">Abner Ruiz</div>
+            <div class="reviewer-meta">Local Guide · 19 reviews · 1 photo</div>
+          </div>
+        </div>
+        <p class="review-text">"Anthony was timely and efficient! He installed the new gutter piece professionally and also found a problem in my wall that I wasn't aware of. Will definitely be calling again for future gutter work."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#dc2626;">WW</div>
+          <div>
+            <div class="reviewer-name">William Widmoyer</div>
+            <div class="reviewer-meta">1 review</div>
+          </div>
+        </div>
+        <p class="review-text">"Anthony did a great job on our roof and front porch replacement after our June tornado. Came back to check on house before a rain storm to make sure our tarps were still in place. Very knowledgeable and very helpful. He did everything he said he would do. Very high recommendation for this very professional business!!"</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#16a34a;">CC</div>
+          <div>
+            <div class="reviewer-name">Cathie Cipriano</div>
+            <div class="reviewer-meta">3 reviews</div>
+          </div>
+        </div>
+        <p class="review-text">"Anthony replaced our old worn gutters and installed new seamless gutters with zero hassle. He arrived on time and finished in a timely manner. My pleasure to support a local family owned business."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#7c3aed;">LB</div>
+          <div>
+            <div class="reviewer-name">Linda Bos</div>
+            <div class="reviewer-meta">12 reviews</div>
+          </div>
+        </div>
+        <p class="review-text">"Anthony is the most helpful and hard working guy I have come in contact with down here. You certainly cannot go wrong by giving him your business!! He is awesome!!!"</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#db2777;">MM</div>
+          <div>
+            <div class="reviewer-name">Michelle Mifflin</div>
+            <div class="reviewer-meta">Local Guide · 17 reviews · 3 photos</div>
+          </div>
+        </div>
+        <p class="review-text">"They did a fantastic job... totally recommend...."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#0891b2;">YH</div>
+          <div>
+            <div class="reviewer-name">Yulexis Hernandez</div>
+            <div class="reviewer-meta">2 reviews · 2 photos</div>
+          </div>
+        </div>
+        <p class="review-text">"Excellent work—fast, high-quality, and professional. The price was fair. I recommend him 100%."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#16a34a;">JC</div>
+          <div>
+            <div class="reviewer-name">Jenny Coleman</div>
+            <div class="reviewer-meta">1 review</div>
+          </div>
+        </div>
+        <p class="review-text">"Nice guy, respectful, good work, cleaned up, did a great job!"</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars stars">★★★★★</div>
+        <div class="review-header">
+          <div class="reviewer-avatar" style="background:#16a34a;">GP</div>
+          <div>
+            <div class="reviewer-name">Gary Peebles</div>
+            <div class="reviewer-meta">Local Guide · 13 reviews</div>
+          </div>
+        </div>
+        <p class="review-text">"Excellent work replaced roof and all gutters."</p>
+        <div class="google-badge">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Verified Google Review
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple. Fast. Professional.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>Request Estimate</h4>
+        <p>Call or fill out our online form. We'll get back to you within the same day.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>Free Inspection</h4>
+        <p>Anthony visits your property, assesses the job, and provides a clear written quote — no surprises.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>Professional Work</h4>
+        <p>We schedule your job and complete it on time with expert craftsmanship and clean job-site practices.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>Your Satisfaction</h4>
+        <p>We don't leave until you're happy. Anthony stands behind every job with a personal commitment to quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready for a Free Estimate?</h2>
+    <p>Join 18+ Florida homeowners who gave Anthony a perfect 5-star rating.</p>
+    <div class="cta-actions">
+      <a href="#" onclick="openModal();return false;" class="btn-primary">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        Get My Free Estimate
+      </a>
+      <a href="tel:+17273088540" class="btn-outline">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.002 8.18 2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (727) 308-8540
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / LEAD FORM -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-label">Contact Us</div>
+        <h2>Get Your Free Estimate Today</h2>
+        <p>Fill out the form and Anthony will personally reach out within a few hours to schedule your free inspection and quote.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.002 8.18 2 2 0 012 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+17273088540">(727) 308-8540</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@floridasfinestgutters.com">info@floridasfinestgutters.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Service Area</strong>
+              <span>Pasco, Pinellas &amp; Manatee County</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Hours</strong>
+              <span>Open 24 Hours · 7 Days a Week</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Request a Free Estimate</h3>
+        <p class="sub">No obligation. Anthony will personally follow up.</p>
+        <div id="form-success">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h4>We Got Your Request!</h4>
+          <p>Anthony will reach out within a few hours. Thank you for choosing Florida's Finest!</p>
+        </div>
+        <!--
+          GHL WEBHOOK: Replace YOUR_GHL_WEBHOOK_URL with your GoHighLevel
+          form webhook or use the GHL-embedded form snippet instead.
+        -->
+        <form id="estimate-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name *</label>
+              <input type="text" id="first_name" name="first_name" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="address">Property Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, City, FL" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service…</option>
+              <option>Gutter Installation</option>
+              <option>Gutter Repair</option>
+              <option>Soffit &amp; Fascia Replacement</option>
+              <option>Aluminum Work</option>
+              <option>Roofing / Roof Repair</option>
+              <option>Gutter Guards / Covers</option>
+              <option>Inspection / Maintenance</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your project…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send My Request →
+          </button>
+          <p class="form-note">🔒 Your information is private and will only be used to contact you about your estimate.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Florida's Finest Gutters & Aluminum" class="logo-img-light" />
+        </a>
+        <p>Expert gutter installation, repair &amp; cleaning in Pasco, Pinellas &amp; Manatee County. Owner-operated by Anthony — open 24 hours with a commitment to quality and honest pricing.</p>
+        <div class="footer-stars">★★★★★ 5.0 · 18 Google Reviews</div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Gutter Installation</a></li>
+          <li><a href="#services">Soffit &amp; Fascia</a></li>
+          <li><a href="#services">Aluminum Work</a></li>
+          <li><a href="#services">Roofing</a></li>
+          <li><a href="#services">Gutter Guards</a></li>
+          <li><a href="#services">Inspections</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why-us">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.facebook.com/floridasfinestgutters" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Florida's Finest Gutters &amp; Aluminum. All rights reserved.</span>
+      <span>Licensed &amp; Insured · Pasco, Pinellas &amp; Manatee County · Open 24 Hours</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FORM MODAL -->
+<div class="modal-overlay" id="estimateModal" onclick="closeModalOnBg(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-header">
+      <div class="modal-stars">★★★★★ 5.0 · 18 Google Reviews</div>
+      <h2>Get Your Free Estimate</h2>
+      <p>No obligation. Anthony personally follows up within hours — open 24/7.</p>
+    </div>
+    <div id="modal-form-success" style="display:none;background:#ecfdf5;border:1px solid #86efac;border-radius:12px;padding:24px;text-align:center;color:#16a34a;">
+      <div style="font-size:2.5rem;margin-bottom:8px;">✓</div>
+      <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:6px;">Request Sent!</h4>
+      <p style="font-size:.92rem;color:#166534;">Anthony will reach out shortly. Thank you for choosing Florida's Finest!</p>
+    </div>
+    <form id="modal-estimate-form" onsubmit="handleModalSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" name="first_name" required placeholder="John" />
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label>
+          <input type="text" name="last_name" required placeholder="Smith" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" required placeholder="(555) 555-5555" class="phone-mask" />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="john@email.com" />
+      </div>
+      <div class="form-group">
+        <label>Property Address</label>
+        <input type="text" name="address" placeholder="123 Main St, City, FL" />
+      </div>
+      <div class="form-group">
+        <label>Service Needed *</label>
+        <select name="service" required>
+          <option value="">Select a service…</option>
+          <option>Gutter Installation</option>
+          <option>Gutter Repair</option>
+          <option>Soffit &amp; Fascia Replacement</option>
+          <option>Aluminum Work</option>
+          <option>Roofing / Roof Repair</option>
+          <option>Gutter Guards / Covers</option>
+          <option>Inspection / Maintenance</option>
+          <option>Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Additional Details</label>
+        <textarea name="message" placeholder="Tell us about your project…" style="min-height:80px;"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send My Request →</button>
+      <p class="form-note">🔒 Your info is private and only used to contact you about your estimate.</p>
+    </form>
+  </div>
+</div>
+
+<!-- VOICE AI WIDGET -->
+<div class="voice-fab" id="voiceFab">
+  <div class="voice-label">💬 Chat with AI Rep · 24/7</div>
+  <button class="voice-fab-btn" onclick="toggleVoicePanel()" title="Talk to our AI rep">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring2"></div>
+    <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+  </button>
+</div>
+
+<div class="voice-panel" id="voicePanel">
+  <div class="voice-panel-header">
+    <div class="ai-avatar">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+    </div>
+    <div>
+      <h4>Florida's Finest AI Rep</h4>
+      <span>Powered by AI · Available 24/7</span>
+    </div>
+    <div class="online-dot"></div>
+    <button class="voice-panel-close" onclick="toggleVoicePanel()">✕</button>
+  </div>
+  <div class="voice-messages" id="voiceMessages"></div>
+  <div class="voice-quick-btns" id="quickBtns">
+    <button class="qbtn" onclick="sendQuick('What services do you offer?')">Services</button>
+    <button class="qbtn" onclick="sendQuick('What areas do you serve?')">Service Area</button>
+    <button class="qbtn" onclick="sendQuick('How much does it cost?')">Pricing</button>
+    <button class="qbtn" onclick="sendQuick('Get a free estimate')">Get Estimate</button>
+  </div>
+  <div class="voice-input-area">
+    <button class="voice-mic-btn" id="micBtn" onclick="toggleMic()" title="Click to speak">
+      <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+    </button>
+    <input class="voice-text-input" id="voiceTextInput" type="text" placeholder="Type or use mic…" onkeydown="if(event.key==='Enter')sendMessage()" />
+    <button class="voice-send-btn" onclick="sendMessage()">
+      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- STICKY PHONE (mobile) -->
+<a href="tel:+17273088540" class="sticky-phone">📞 Call (727) 308-8540 — Free Estimate · Open 24 Hours</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // ── FORM MODAL ──
+  function openModal() {
+    document.getElementById('estimateModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('estimateModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOnBg(e) { if (e.target.id === 'estimateModal') closeModal(); }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  async function handleModalSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    const data = {
+      first_name: form.first_name.value, last_name: form.last_name.value,
+      phone: form.phone.value, email: form.email.value,
+      address: form.address.value, service: form.service.value,
+      message: form.message.value, source: 'Website Modal Form',
+      tags: ['website-lead', 'estimate-request'],
+    };
+    try {
+      if (GHL_WEBHOOK_URL !== 'YOUR_GHL_WEBHOOK_URL') {
+        await fetch(GHL_WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+      } else { console.log('GHL payload:', data); await new Promise(r=>setTimeout(r,700)); }
+      form.style.display = 'none';
+      document.getElementById('modal-form-success').style.display = 'block';
+    } catch(err) { btn.textContent = 'Error — Call us at (727) 308-8540'; btn.style.background='#dc2626'; btn.disabled=false; }
+  }
+
+  // Phone mask for modal form
+  document.querySelectorAll('.phone-mask').forEach(el => {
+    el.addEventListener('input', function() {
+      let v = this.value.replace(/\D/g,'').slice(0,10);
+      if(v.length>=6) v='('+v.slice(0,3)+') '+v.slice(3,6)+'-'+v.slice(6);
+      else if(v.length>=3) v='('+v.slice(0,3)+') '+v.slice(3);
+      this.value = v;
+    });
+  });
+
+  // ── VOICE AI ──
+  const KB = [
+    { keys:['hello','hi','hey','howdy','good morning','good afternoon','good evening','start'],
+      reply:"Hi! I'm the virtual rep for Florida's Finest Gutters & Aluminum. I can answer questions about our services, pricing, or get you a free estimate. What can I help you with?" },
+    { keys:['service','offer','do you','gutter','soffit','fascia','aluminum','roof','awning','clean','repair','guard','cover','install'],
+      reply:"We specialize in: seamless gutter installation, soffit & fascia replacement, aluminum work, roofing repairs, gutter guards, and pool enclosure work. Anthony personally handles every job in Pasco, Pinellas & Manatee County." },
+    { keys:['area','location','county','where','pasco','pinellas','manatee','serve','cover','near'],
+      reply:"We serve Pasco County, Pinellas County, and Manatee County throughout Florida. Not sure if we cover your area? Call us at (727) 308-8540 and we'll confirm right away." },
+    { keys:['price','cost','charge','how much','expensive','affordable','quote','estimate','free'],
+      reply:"We offer 100% free estimates with no obligation! Anthony visits your property, assesses the job, and gives you a clear written quote. Our customers consistently find our pricing beats competitor estimates." },
+    { keys:['hour','open','available','24','anytime','when','weekend','sunday','saturday'],
+      reply:"We're open 24 hours a day, 7 days a week — including weekends and holidays. Call anytime at (727) 308-8540 or submit a request and Anthony will follow up fast." },
+    { keys:['review','rating','star','google','reputation','trusted','recommend','good'],
+      reply:"We have a perfect 5.0-star rating on Google with 18 verified reviews. Customers love Anthony's professionalism, fair pricing, clean job sites, and going above and beyond — like checking on homes before storms!" },
+    { keys:['anthony','owner','who','experience','licensed','insured'],
+      reply:"Anthony is the owner-operator of Florida's Finest Gutters & Aluminum. He personally handles every job — no subcontractors. He's licensed, insured, and has built a spotless reputation across Pasco, Pinellas & Manatee County." },
+    { keys:['book','schedule','appointment','contact','call','form','estimate','get','start','need'],
+      reply:"I'll open the estimate form for you right now! Fill it out and Anthony will personally follow up within hours.", action:'openModal' },
+    { keys:['phone','number','telephone','dial','reach'],
+      reply:"You can reach Anthony directly at (727) 308-8540 — available 24/7. Or I can open our estimate form if you'd prefer to submit online. Which do you prefer?" },
+    { keys:['thank','thanks','great','awesome','perfect','helpful','bye','goodbye','later'],
+      reply:"Thank you for reaching out to Florida's Finest Gutters & Aluminum! We look forward to protecting your home. Feel free to ask anything else or call us anytime at (727) 308-8540. Have a great day! 🙂" },
+  ];
+
+  function matchReply(text) {
+    const t = text.toLowerCase();
+    for (const item of KB) {
+      if (item.keys.some(k => t.includes(k))) return item;
+    }
+    return { reply:"Great question! For the most accurate answer, call Anthony directly at (727) 308-8540 — available 24/7. Or would you like me to open the free estimate form?" };
+  }
+
+  function addMsg(text, role) {
+    const box = document.getElementById('voiceMessages');
+    const div = document.createElement('div');
+    div.className = `msg ${role}`;
+    div.innerHTML = `<div class="msg-avatar">${role==='ai'?'AI':'You'}</div><div class="msg-bubble">${text}</div>`;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function showTyping() {
+    const box = document.getElementById('voiceMessages');
+    const div = document.createElement('div');
+    div.className = 'msg ai'; div.id = 'typing-indicator';
+    div.innerHTML = `<div class="msg-avatar">AI</div><div class="msg-bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+    box.appendChild(div); box.scrollTop = box.scrollHeight;
+  }
+
+  function removeTyping() { document.getElementById('typing-indicator')?.remove(); }
+
+  let voiceOpened = false;
+  function toggleVoicePanel() {
+    const panel = document.getElementById('voicePanel');
+    panel.classList.toggle('open');
+    if (!voiceOpened && panel.classList.contains('open')) {
+      voiceOpened = true;
+      setTimeout(() => {
+        addMsg("👋 Hi! I'm the Florida's Finest AI rep — available 24/7. Ask me about services, pricing, or tap a quick button below!", 'ai');
+        speak("Hi! I'm the Florida's Finest virtual rep. How can I help you today?");
+      }, 400);
+    }
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('voiceTextInput');
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = '';
+    addMsg(text, 'user');
+    showTyping();
+    await new Promise(r => setTimeout(r, 900 + Math.random()*400));
+    removeTyping();
+    const match = matchReply(text);
+    addMsg(match.reply, 'ai');
+    speak(match.reply);
+    if (match.action === 'openModal') { setTimeout(openModal, 800); }
+  }
+
+  function sendQuick(text) {
+    document.getElementById('voiceTextInput').value = text;
+    sendMessage();
+  }
+
+  // Speech synthesis (text-to-voice)
+  function speak(text) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text.replace(/<[^>]+>/g,''));
+    utter.rate = 1.05; utter.pitch = 1; utter.volume = 0.9;
+    // Prefer a natural-sounding voice
+    const voices = window.speechSynthesis.getVoices();
+    const preferred = voices.find(v => v.name.includes('Samantha') || v.name.includes('Google US English') || v.name.includes('Alex'));
+    if (preferred) utter.voice = preferred;
+    window.speechSynthesis.speak(utter);
+  }
+  window.speechSynthesis?.addEventListener('voiceschanged', () => {});
+
+  // Speech recognition (voice-to-text)
+  let recognition, isListening = false;
+  function toggleMic() {
+    const btn = document.getElementById('micBtn');
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      addMsg("Voice input isn't supported in this browser. Try Chrome! You can still type below.", 'ai'); return;
+    }
+    if (isListening) { recognition?.stop(); return; }
+    recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US'; recognition.interimResults = false;
+    recognition.onstart = () => { isListening=true; btn.classList.add('listening'); };
+    recognition.onresult = e => {
+      const transcript = e.results[0][0].transcript;
+      document.getElementById('voiceTextInput').value = transcript;
+      sendMessage();
+    };
+    recognition.onend = () => { isListening=false; btn.classList.remove('listening'); };
+    recognition.onerror = () => { isListening=false; btn.classList.remove('listening'); };
+    recognition.start();
+  }
+
+  // ── FORM SUBMISSION → GHL WEBHOOK ──
+  // Replace GHL_WEBHOOK_URL with your actual GoHighLevel webhook endpoint.
+  // You can get this from GHL → Sites → Forms → Integrations → Webhook,
+  // OR use the GHL inbound webhook under Automation → Webhooks.
+  const GHL_WEBHOOK_URL = 'YOUR_GHL_WEBHOOK_URL';
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data = {
+      first_name: form.first_name.value,
+      last_name:  form.last_name.value,
+      phone:      form.phone.value,
+      email:      form.email.value,
+      address:    form.address.value,
+      service:    form.service.value,
+      message:    form.message.value,
+      source:     'Website Estimate Form',
+      tags:       ['website-lead', 'estimate-request'],
+    };
+
+    try {
+      if (GHL_WEBHOOK_URL && GHL_WEBHOOK_URL !== 'YOUR_GHL_WEBHOOK_URL') {
+        await fetch(GHL_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } else {
+        // Dev fallback: log payload so you can inspect it
+        console.log('GHL payload (webhook URL not set):', data);
+        await new Promise(r => setTimeout(r, 800));
+      }
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } catch (err) {
+      btn.textContent = 'Error — Please call us instead';
+      btn.style.background = '#dc2626';
+      btn.disabled = false;
+    }
+  }
+
+  // ── LIGHTBOX ──
+  const galleryItems = [
+    { src: 'images/job1.jpg', caption: 'Seamless Black Gutters · Modern Home' },
+    { src: 'images/job2.jpg', caption: 'Gutter & Downspout · Stucco Home' },
+    { src: 'images/job3.jpg', caption: 'Gutter Installation · Florida Ranch Home' },
+    { src: 'images/job4.jpg', caption: 'Aluminum Awning Installation' },
+    { src: 'images/job5.jpg', caption: 'Pool Enclosure & Soffit Work' },
+  ];
+  let currentIdx = 0;
+  function openLightbox(idx) {
+    currentIdx = idx;
+    document.getElementById('lightbox-img').src = galleryItems[idx].src;
+    document.getElementById('lightbox-caption').textContent = galleryItems[idx].caption;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOnBg(e) { if (e.target.id === 'lightbox') closeLightbox(); }
+  function shiftLightbox(dir) {
+    currentIdx = (currentIdx + dir + galleryItems.length) % galleryItems.length;
+    document.getElementById('lightbox-img').src = galleryItems[currentIdx].src;
+    document.getElementById('lightbox-caption').textContent = galleryItems[currentIdx].caption;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') shiftLightbox(-1);
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+  });
+
+  // Smooth-scroll offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Phone mask helper
+  document.getElementById('phone').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '').slice(0, 10);
+    if (v.length >= 6) v = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+    else if (v.length >= 3) v = '(' + v.slice(0,3) + ') ' + v.slice(3);
+    this.value = v;
+  });
+</script>
+</body>
+</html>
