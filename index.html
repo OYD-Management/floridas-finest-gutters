@@ -154,57 +154,64 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 320px 260px;
-      gap: 16px;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 340px 240px;
+      gap: 12px;
     }
     .service-card {
-      position: relative; border-radius: var(--radius); overflow: hidden;
-      cursor: pointer;
+      position: relative; border-radius: 16px; overflow: hidden;
+      cursor: pointer; border: 1.5px solid rgba(255,255,255,.08);
+      transition: border-color .3s, transform .3s;
     }
-    .service-card:first-child { grid-column: span 2; }
-    .service-card:last-child { grid-column: span 2; }
+    .service-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .service-card:first-child { grid-row: span 2; }
     .service-card img {
       position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; transition: transform .5s ease;
     }
-    .service-card:hover img { transform: scale(1.06); }
+    .service-card:hover img { transform: scale(1.07); }
     .service-card-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,20,50,.88) 0%, rgba(10,20,50,.35) 55%, rgba(10,20,50,.1) 100%);
-      transition: background .3s;
+      background: linear-gradient(to top, rgba(5,15,40,.92) 0%, rgba(5,15,40,.4) 50%, rgba(5,15,40,.05) 100%);
     }
-    .service-card:hover .service-card-overlay {
-      background: linear-gradient(to top, rgba(10,20,50,.94) 0%, rgba(10,20,50,.55) 60%, rgba(10,20,50,.2) 100%);
-    }
-    .service-card-body {
-      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 28px;
+    .service-card-top {
+      position: absolute; top: 16px; left: 16px;
     }
     .service-tag {
       display: inline-block; background: var(--gold); color: var(--blue-dk);
-      font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-      padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
+      font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 100px;
+    }
+    .service-card-body {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 22px;
     }
     .service-card h3 {
-      font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 0;
-      line-height: 1.3;
+      font-size: 1.05rem; font-weight: 800; color: #fff; line-height: 1.25;
+      margin-bottom: 0;
     }
-    .service-card:first-child h3 { font-size: 1.55rem; }
+    .service-card:first-child h3 { font-size: 1.6rem; margin-bottom: 6px; }
     .service-card p {
-      color: rgba(255,255,255,.78); font-size: .88rem; line-height: 1.6;
-      margin-top: 8px; max-height: 0; overflow: hidden;
-      transition: max-height .35s ease, opacity .3s;
-      opacity: 0;
+      color: rgba(255,255,255,.75); font-size: .84rem; line-height: 1.55;
+      margin-top: 6px; max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, opacity .3s; opacity: 0;
     }
-    .service-card:hover p { max-height: 80px; opacity: 1; }
+    .service-card:hover p { max-height: 100px; opacity: 1; }
     .service-cta {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--gold); font-size: .82rem; font-weight: 700;
-      margin-top: 10px; opacity: 0; transform: translateY(6px);
-      transition: opacity .3s, transform .3s;
+      display: inline-flex; align-items: center; gap: 5px;
+      color: var(--gold); font-size: .8rem; font-weight: 700;
+      margin-top: 10px; opacity: 0; transform: translateY(4px);
+      transition: opacity .25s, transform .25s;
     }
     .service-card:hover .service-cta { opacity: 1; transform: translateY(0); }
-    .service-cta svg { width: 14px; height: 14px; fill: none; stroke: var(--gold); stroke-width: 2.5; }
+    .service-cta svg { width: 13px; height: 13px; fill: none; stroke: var(--gold); stroke-width: 2.5; }
+    .service-card-arrow {
+      position: absolute; top: 16px; right: 16px;
+      width: 32px; height: 32px; background: rgba(255,255,255,.12);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .service-card:hover .service-card-arrow { background: var(--gold); }
+    .service-card-arrow svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.5; }
 
     /* ── WHY US ── */
     .why { padding: 96px 0; }
@@ -589,9 +596,8 @@
       .section-title { font-size: 1.5rem; }
       .section-sub { font-size: .93rem; }
       .section-head { margin-bottom: 36px; }
-      .services-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 200px 200px; gap: 12px; }
-      .service-card:first-child { grid-column: span 2; }
-      .service-card:last-child { grid-column: span 1; }
+      .services-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 280px 200px 200px; gap: 10px; }
+      .service-card:first-child { grid-column: span 2; grid-row: span 1; }
       .reviews-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .form-card { padding: 24px 20px; }
@@ -608,8 +614,8 @@
     }
 
     @media (max-width: 480px) {
-      .services-grid { grid-template-columns: 1fr; grid-template-rows: 260px 220px 220px 220px 220px; }
-      .service-card:first-child, .service-card:last-child { grid-column: span 1; }
+      .services-grid { grid-template-columns: 1fr; grid-template-rows: 280px 220px 220px 220px 220px; }
+      .service-card:first-child { grid-column: span 1; grid-row: span 1; }
     }
     @media (max-width: 400px) {
       .logo-img { height: 40px; }
@@ -749,8 +755,9 @@
       <div class="service-card" onclick="openModal()">
         <img src="images/seamless-gutters-installed.jpg" alt="Seamless Gutter Installation" loading="lazy" />
         <div class="service-card-overlay"></div>
+        <div class="service-card-top"><div class="service-tag">Most Popular</div></div>
+        <div class="service-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         <div class="service-card-body">
-          <div class="service-tag">Most Popular</div>
           <h3>Seamless Gutter Installation</h3>
           <p>Custom-cut on-site for a perfect fit. No seams means fewer leaks and a cleaner look for your home — guaranteed.</p>
           <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -759,8 +766,9 @@
       <div class="service-card" onclick="openModal()">
         <img src="images/soffit-facia-seamless.jpg" alt="Soffit & Fascia Replacement" loading="lazy" />
         <div class="service-card-overlay"></div>
+        <div class="service-card-top"><div class="service-tag">Full Service</div></div>
+        <div class="service-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         <div class="service-card-body">
-          <div class="service-tag">Full Service</div>
           <h3>Soffit &amp; Fascia Replacement</h3>
           <p>Protect your roofline with durable aluminum materials installed right the first time.</p>
           <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -769,8 +777,9 @@
       <div class="service-card" onclick="openModal()">
         <img src="images/screen-aluminum-enclosure.jpg" alt="Aluminum Work" loading="lazy" />
         <div class="service-card-overlay"></div>
+        <div class="service-card-top"><div class="service-tag">Custom</div></div>
+        <div class="service-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         <div class="service-card-body">
-          <div class="service-tag">Custom</div>
           <h3>Aluminum Work &amp; Enclosures</h3>
           <p>Panels, screen enclosures, trim, and custom aluminum products built for Florida homes.</p>
           <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -779,8 +788,9 @@
       <div class="service-card" onclick="openModal()">
         <img src="images/gutter-guards.jpg" alt="Gutter Guards" loading="lazy" />
         <div class="service-card-overlay"></div>
+        <div class="service-card-top"><div class="service-tag">Low Maintenance</div></div>
+        <div class="service-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         <div class="service-card-body">
-          <div class="service-tag">Low Maintenance</div>
           <h3>Gutter Guards &amp; Covers</h3>
           <p>Stop climbing that ladder. Keep gutters clear year-round with professional guard installation.</p>
           <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -789,8 +799,9 @@
       <div class="service-card" onclick="openModal()">
         <img src="images/seamless-gutter-mvp-4.jpg" alt="Roofing & Repairs" loading="lazy" />
         <div class="service-card-overlay"></div>
+        <div class="service-card-top"><div class="service-tag">Storm Ready</div></div>
+        <div class="service-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         <div class="service-card-body">
-          <div class="service-tag">Storm Ready</div>
           <h3>Roofing &amp; Storm Repairs</h3>
           <p>Anthony checks your home before storms hit. Fast response, honest assessment, fair price.</p>
           <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
