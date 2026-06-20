@@ -233,45 +233,59 @@
     .why-point p { color: var(--gray-600); font-size: .92rem; line-height: 1.6; }
 
     /* ── GALLERY ── */
-    .gallery { padding: 96px 0; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 56px;
+    .gallery { padding: 96px 0; background: #fff; }
+    .gallery-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 48px; gap: 24px; flex-wrap: wrap;
+    }
+    .gallery-head-text .section-label { margin-bottom: 8px; }
+    .gallery-head-text h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--gray-800); margin-bottom: 10px; line-height: 1.15; }
+    .gallery-head-text p { color: var(--gray-600); font-size: .97rem; line-height: 1.65; max-width: 480px; }
+    .gallery-count-badge {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+      background: var(--blue-dk); color: #fff; border-radius: 12px;
+      padding: 16px 24px;
+    }
+    .gallery-count-badge strong { font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .gallery-count-badge span { font-size: .82rem; line-height: 1.3; opacity: .85; }
+
+    .gallery-masonry {
+      columns: 3; column-gap: 14px;
     }
     .gallery-item {
-      position: relative; overflow: hidden; border-radius: var(--radius);
-      background: var(--gray-200); cursor: pointer;
-    }
-    .gallery-item:first-child {
-      grid-column: span 2;
+      break-inside: avoid; position: relative; overflow: hidden;
+      border-radius: var(--radius); cursor: pointer; margin-bottom: 14px;
+      display: block;
     }
     .gallery-item img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform .4s ease;
-      min-height: 240px;
+      width: 100%; height: auto; display: block;
+      transition: transform .45s ease;
     }
-    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-caption {
       position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,.65));
-      color: #fff; padding: 28px 16px 14px;
-      font-size: .85rem; font-weight: 600; opacity: 0;
-      transition: opacity .3s;
+      background: linear-gradient(transparent, rgba(10,20,50,.75));
+      color: #fff; padding: 32px 16px 14px;
+      font-size: .82rem; font-weight: 700; opacity: 0;
+      transition: opacity .3s; letter-spacing: .02em;
     }
     .gallery-item:hover .gallery-caption { opacity: 1; }
+    .gallery-item::after {
+      content: ''; position: absolute; inset: 0;
+      border: 3px solid var(--gold); border-radius: var(--radius);
+      opacity: 0; transition: opacity .3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
     .gallery-item.hidden { display: none; }
-    .gallery-show-more {
-      grid-column: 1 / -1; text-align: center; margin-top: 8px;
-    }
+
+    .gallery-show-more { text-align: center; margin-top: 8px; }
     .gallery-show-more button {
-      background: transparent; border: 2px solid var(--blue);
-      color: var(--blue); font-weight: 700; font-size: .95rem;
-      padding: 12px 32px; border-radius: 8px; cursor: pointer;
-      transition: all .2s;
+      background: var(--blue-dk); border: none;
+      color: #fff; font-weight: 700; font-size: .95rem;
+      padding: 14px 36px; border-radius: 8px; cursor: pointer;
+      transition: background .2s, transform .15s;
     }
-    .gallery-show-more button:hover { background: var(--blue); color: #fff; }
+    .gallery-show-more button:hover { background: var(--blue); transform: translateY(-1px); }
 
     /* Lightbox */
     .lightbox {
@@ -299,12 +313,12 @@
     }
 
     @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-item:first-child { grid-column: span 2; }
+      .gallery-masonry { columns: 2; }
     }
     @media (max-width: 500px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item:first-child { grid-column: span 1; }
+      .gallery-masonry { columns: 1; }
+      .gallery-head { flex-direction: column; align-items: flex-start; }
+      .gallery-count-badge { align-self: flex-start; }
     }
 
     /* ── REVIEWS ── */
@@ -861,99 +875,105 @@
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="container">
-    <div class="section-head">
-      <div class="section-label">Our Work</div>
-      <h2 class="section-title">Real Jobs. Real Results.</h2>
-      <p class="section-sub">Every photo is from an actual Anthony job — seamless gutters, aluminum work, awnings, and more across Pasco, Pinellas &amp; Manatee County.</p>
+    <div class="gallery-head">
+      <div class="gallery-head-text">
+        <div class="section-label">Our Work</div>
+        <h2>Real Jobs.<br>Real Results.</h2>
+        <p>Every photo is a finished job from Anthony's crew — no stock images, no tricks. Pasco, Pinellas &amp; Manatee County.</p>
+      </div>
+      <div class="gallery-count-badge">
+        <strong>21+</strong>
+        <span>Completed<br>Jobs Shown</span>
+      </div>
     </div>
-    <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-masonry" id="galleryGrid">
       <div class="gallery-item" onclick="openLightbox(0)">
-        <img src="images/seamless-gutters-installed.jpg" alt="Seamless gutters installed on Florida home" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install · Florida Home</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(1)">
-        <img src="images/soffit-facia-seamless.jpg" alt="Soffit, fascia and seamless gutter installation" loading="lazy" />
-        <div class="gallery-caption">Soffit · Fascia · Seamless Gutters</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(2)">
-        <img src="images/seamless-gutter-mvp-1.jpg" alt="Seamless gutter MVP installation" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(3)">
-        <img src="images/gutter-guards.jpg" alt="Gutter guards installation" loading="lazy" />
-        <div class="gallery-caption">Gutter Guards Installation</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(4)">
-        <img src="images/screen-aluminum-enclosure.jpg" alt="Screen and aluminum enclosure" loading="lazy" />
-        <div class="gallery-caption">Screen &amp; Aluminum Enclosure</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(5)">
         <img src="images/soffit-facia-gutter.jpg" alt="Soffit, fascia and gutter work" loading="lazy" />
         <div class="gallery-caption">Soffit · Fascia · Gutter</div>
       </div>
-      <div class="gallery-item hidden" onclick="openLightbox(6)">
-        <img src="images/drip-edge-gutters.jpg" alt="Drip edge and gutter installation" loading="lazy" />
-        <div class="gallery-caption">Drip Edge &amp; Gutters</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(7)">
-        <img src="images/gutter-install-seamless.jpg" alt="Seamless gutter install in progress" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(8)">
-        <img src="images/seamless-soffit-facia-mvp.jpg" alt="Seamless gutter, soffit and fascia MVP" loading="lazy" />
-        <div class="gallery-caption">Seamless · Soffit · Fascia</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(9)">
-        <img src="images/seamless-gutter-mvp-3.jpg" alt="Seamless gutter installation" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(10)">
-        <img src="images/seamless-gutter-mvp-4.jpg" alt="Seamless gutter on home exterior" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutters · Home Exterior</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(11)">
-        <img src="images/seamless-facia-metal.jpg" alt="Seamless gutter, fascia and metal work" loading="lazy" />
-        <div class="gallery-caption">Seamless · Fascia · Metal</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(12)">
-        <img src="images/seamless-gutter-2.jpg" alt="Seamless gutter installation" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(13)">
-        <img src="images/seamless-gutters-soffit.jpg" alt="Seamless gutters and soffit" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutters &amp; Soffit</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(14)">
-        <img src="images/seamless-gutters-4.jpg" alt="Seamless gutter installation" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(15)">
+      <div class="gallery-item" onclick="openLightbox(1)">
         <img src="images/seamless-white-gutter.jpg" alt="White seamless gutter installation" loading="lazy" />
         <div class="gallery-caption">White Seamless Gutters</div>
       </div>
-      <div class="gallery-item hidden" onclick="openLightbox(16)">
-        <img src="images/soffit-gutter-2.jpg" alt="Soffit and gutter installation" loading="lazy" />
-        <div class="gallery-caption">Soffit &amp; Gutter</div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="images/drip-edge-gutters.jpg" alt="Drip edge and gutter installation" loading="lazy" />
+        <div class="gallery-caption">Drip Edge &amp; Gutters</div>
       </div>
-      <div class="gallery-item hidden" onclick="openLightbox(17)">
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="images/seamless-gutter-mvp-1.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="images/roll-form-gutter-finished.jpg" alt="Roll form gutter finished" loading="lazy" />
+        <div class="gallery-caption">Roll Form Gutter · Finished</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="images/seamless-soffit-facia-mvp.jpg" alt="Seamless gutter, soffit and fascia" loading="lazy" />
+        <div class="gallery-caption">Seamless · Soffit · Fascia</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(6)">
         <img src="images/more-seamless-installs.jpg" alt="Multiple seamless gutter installs" loading="lazy" />
         <div class="gallery-caption">More Seamless Installs</div>
       </div>
-      <div class="gallery-item hidden" onclick="openLightbox(18)">
-        <img src="images/seamless-gutter-3.jpg" alt="Seamless gutter installation" loading="lazy" />
-        <div class="gallery-caption">Seamless Gutter Install</div>
+      <div class="gallery-item" onclick="openLightbox(7)">
+        <img src="images/seamless-facia-metal.jpg" alt="Seamless gutter, fascia and metal" loading="lazy" />
+        <div class="gallery-caption">Seamless · Fascia · Metal</div>
       </div>
-      <div class="gallery-item hidden" onclick="openLightbox(19)">
-        <img src="images/roll-form-gutter-finished.jpg" alt="Roll form gutter finished install" loading="lazy" />
-        <div class="gallery-caption">Roll Form Gutter · Finished</div>
-      </div>
-      <div class="gallery-item hidden" onclick="openLightbox(20)">
+      <div class="gallery-item" onclick="openLightbox(8)">
         <img src="images/gutter-job-6898.jpg" alt="Completed gutter job" loading="lazy" />
         <div class="gallery-caption">Completed Gutter Job</div>
       </div>
-      <div class="gallery-show-more" id="galleryShowMore">
-        <button onclick="showAllGallery()">View All Photos (21)</button>
+      <div class="gallery-item hidden" onclick="openLightbox(9)">
+        <img src="images/seamless-gutters-installed.jpg" alt="Seamless gutters installed" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
       </div>
+      <div class="gallery-item hidden" onclick="openLightbox(10)">
+        <img src="images/soffit-facia-seamless.jpg" alt="Soffit, fascia and seamless gutters" loading="lazy" />
+        <div class="gallery-caption">Soffit · Fascia · Seamless</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(11)">
+        <img src="images/gutter-guards.jpg" alt="Gutter guards installation" loading="lazy" />
+        <div class="gallery-caption">Gutter Guards Installation</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(12)">
+        <img src="images/screen-aluminum-enclosure.jpg" alt="Screen and aluminum enclosure" loading="lazy" />
+        <div class="gallery-caption">Screen &amp; Aluminum Enclosure</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(13)">
+        <img src="images/gutter-install-seamless.jpg" alt="Seamless gutter install" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(14)">
+        <img src="images/seamless-gutter-mvp-3.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(15)">
+        <img src="images/seamless-gutter-mvp-4.jpg" alt="Seamless gutters on home" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutters · Home Exterior</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(16)">
+        <img src="images/seamless-gutter-2.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(17)">
+        <img src="images/seamless-gutters-soffit.jpg" alt="Seamless gutters and soffit" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutters &amp; Soffit</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(18)">
+        <img src="images/seamless-gutters-4.jpg" alt="Seamless gutters" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(19)">
+        <img src="images/soffit-gutter-2.jpg" alt="Soffit and gutter" loading="lazy" />
+        <div class="gallery-caption">Soffit &amp; Gutter</div>
+      </div>
+      <div class="gallery-item hidden" onclick="openLightbox(20)">
+        <img src="images/seamless-gutter-3.jpg" alt="Seamless gutter installation" loading="lazy" />
+        <div class="gallery-caption">Seamless Gutter Install</div>
+      </div>
+    </div>
+    <div class="gallery-show-more" id="galleryShowMore" style="margin-top:24px;">
+      <button onclick="showAllGallery()">View All 21 Photos</button>
     </div>
   </div>
 </section>
@@ -1650,27 +1670,27 @@
 
   // ── LIGHTBOX ──
   const galleryItems = [
-    { src: 'images/seamless-gutters-installed.jpg', caption: 'Seamless Gutter Install · Florida Home' },
-    { src: 'images/soffit-facia-seamless.jpg', caption: 'Soffit · Fascia · Seamless Gutters' },
+    { src: 'images/soffit-facia-gutter.jpg', caption: 'Soffit · Fascia · Gutter' },
+    { src: 'images/seamless-white-gutter.jpg', caption: 'White Seamless Gutters' },
+    { src: 'images/drip-edge-gutters.jpg', caption: 'Drip Edge & Gutters' },
     { src: 'images/seamless-gutter-mvp-1.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/roll-form-gutter-finished.jpg', caption: 'Roll Form Gutter · Finished' },
+    { src: 'images/seamless-soffit-facia-mvp.jpg', caption: 'Seamless · Soffit · Fascia' },
+    { src: 'images/more-seamless-installs.jpg', caption: 'More Seamless Installs' },
+    { src: 'images/seamless-facia-metal.jpg', caption: 'Seamless · Fascia · Metal' },
+    { src: 'images/gutter-job-6898.jpg', caption: 'Completed Gutter Job' },
+    { src: 'images/seamless-gutters-installed.jpg', caption: 'Seamless Gutter Install' },
+    { src: 'images/soffit-facia-seamless.jpg', caption: 'Soffit · Fascia · Seamless' },
     { src: 'images/gutter-guards.jpg', caption: 'Gutter Guards Installation' },
     { src: 'images/screen-aluminum-enclosure.jpg', caption: 'Screen & Aluminum Enclosure' },
-    { src: 'images/soffit-facia-gutter.jpg', caption: 'Soffit · Fascia · Gutter' },
-    { src: 'images/drip-edge-gutters.jpg', caption: 'Drip Edge & Gutters' },
     { src: 'images/gutter-install-seamless.jpg', caption: 'Seamless Gutter Install' },
-    { src: 'images/seamless-soffit-facia-mvp.jpg', caption: 'Seamless · Soffit · Fascia' },
     { src: 'images/seamless-gutter-mvp-3.jpg', caption: 'Seamless Gutter Install' },
     { src: 'images/seamless-gutter-mvp-4.jpg', caption: 'Seamless Gutters · Home Exterior' },
-    { src: 'images/seamless-facia-metal.jpg', caption: 'Seamless · Fascia · Metal' },
     { src: 'images/seamless-gutter-2.jpg', caption: 'Seamless Gutter Install' },
     { src: 'images/seamless-gutters-soffit.jpg', caption: 'Seamless Gutters & Soffit' },
     { src: 'images/seamless-gutters-4.jpg', caption: 'Seamless Gutter Install' },
-    { src: 'images/seamless-white-gutter.jpg', caption: 'White Seamless Gutters' },
     { src: 'images/soffit-gutter-2.jpg', caption: 'Soffit & Gutter' },
-    { src: 'images/more-seamless-installs.jpg', caption: 'More Seamless Installs' },
     { src: 'images/seamless-gutter-3.jpg', caption: 'Seamless Gutter Install' },
-    { src: 'images/roll-form-gutter-finished.jpg', caption: 'Roll Form Gutter · Finished' },
-    { src: 'images/gutter-job-6898.jpg', caption: 'Completed Gutter Job' },
   ];
   function showAllGallery() {
     document.querySelectorAll('.gallery-item.hidden').forEach(el => el.classList.remove('hidden'));
