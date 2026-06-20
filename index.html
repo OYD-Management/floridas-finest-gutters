@@ -140,7 +140,10 @@
     .mini-review-author { font-weight: 600; font-style: normal; margin-top: 8px; opacity: .8; font-size: .82rem; }
 
     /* ── SERVICES ── */
-    .services { padding: 96px 0; background: var(--gray-50); }
+    .services { padding: 96px 0; background: var(--gray-800); }
+    .services .section-label { color: var(--gold); }
+    .services .section-title { color: #fff; }
+    .services .section-sub { color: rgba(255,255,255,.65); }
     .section-label {
       font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
       color: var(--blue); margin-bottom: 10px;
@@ -149,20 +152,59 @@
     .section-sub { color: var(--gray-600); font-size: 1.05rem; line-height: 1.7; max-width: 560px; }
     .section-head { margin-bottom: 56px; }
 
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 320px 260px;
+      gap: 16px;
+    }
     .service-card {
-      background: var(--white); border-radius: var(--radius); padding: 32px;
-      box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s;
-      border-bottom: 4px solid transparent;
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      cursor: pointer;
     }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.16); border-bottom-color: var(--blue); }
-    .service-icon {
-      width: 56px; height: 56px; background: linear-gradient(135deg, var(--blue) 0%, #3b82f6 100%);
-      border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    .service-card:first-child { grid-column: span 2; }
+    .service-card:last-child { grid-column: span 2; }
+    .service-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; transition: transform .5s ease;
     }
-    .service-icon svg { width: 28px; height: 28px; fill: #fff; }
-    .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
-    .service-card p { color: var(--gray-600); font-size: .93rem; line-height: 1.65; }
+    .service-card:hover img { transform: scale(1.06); }
+    .service-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,20,50,.88) 0%, rgba(10,20,50,.35) 55%, rgba(10,20,50,.1) 100%);
+      transition: background .3s;
+    }
+    .service-card:hover .service-card-overlay {
+      background: linear-gradient(to top, rgba(10,20,50,.94) 0%, rgba(10,20,50,.55) 60%, rgba(10,20,50,.2) 100%);
+    }
+    .service-card-body {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 28px;
+    }
+    .service-tag {
+      display: inline-block; background: var(--gold); color: var(--blue-dk);
+      font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;
+    }
+    .service-card h3 {
+      font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 0;
+      line-height: 1.3;
+    }
+    .service-card:first-child h3 { font-size: 1.55rem; }
+    .service-card p {
+      color: rgba(255,255,255,.78); font-size: .88rem; line-height: 1.6;
+      margin-top: 8px; max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, opacity .3s;
+      opacity: 0;
+    }
+    .service-card:hover p { max-height: 80px; opacity: 1; }
+    .service-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--gold); font-size: .82rem; font-weight: 700;
+      margin-top: 10px; opacity: 0; transform: translateY(6px);
+      transition: opacity .3s, transform .3s;
+    }
+    .service-card:hover .service-cta { opacity: 1; transform: translateY(0); }
+    .service-cta svg { width: 14px; height: 14px; fill: none; stroke: var(--gold); stroke-width: 2.5; }
 
     /* ── WHY US ── */
     .why { padding: 96px 0; }
@@ -533,8 +575,9 @@
       .section-title { font-size: 1.5rem; }
       .section-sub { font-size: .93rem; }
       .section-head { margin-bottom: 36px; }
-      .services-grid { grid-template-columns: 1fr; gap: 16px; }
-      .service-card { padding: 24px; }
+      .services-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 200px 200px; gap: 12px; }
+      .service-card:first-child { grid-column: span 2; }
+      .service-card:last-child { grid-column: span 1; }
       .reviews-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .form-card { padding: 24px 20px; }
@@ -550,12 +593,15 @@
       .stat-num { font-size: 1.8rem; }
     }
 
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; grid-template-rows: 260px 220px 220px 220px 220px; }
+      .service-card:first-child, .service-card:last-child { grid-column: span 1; }
+    }
     @media (max-width: 400px) {
       .logo-img { height: 40px; }
       .hero h1 { font-size: 1.5rem; }
       .container { padding: 0 16px; }
       .form-card { padding: 20px 16px; }
-      .service-card { padding: 20px; }
     }
 
     /* Mobile nav */
@@ -686,47 +732,55 @@
       <p class="section-sub">From seamless gutters to full soffit and fascia replacement — we handle it all with professional craftsmanship and fair pricing.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+      <div class="service-card" onclick="openModal()">
+        <img src="images/seamless-gutters-installed.jpg" alt="Seamless Gutter Installation" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-body">
+          <div class="service-tag">Most Popular</div>
+          <h3>Seamless Gutter Installation</h3>
+          <p>Custom-cut on-site for a perfect fit. No seams means fewer leaks and a cleaner look for your home — guaranteed.</p>
+          <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <h3>Seamless Gutter Installation</h3>
-        <p>Custom-cut seamless gutters installed on-site for a perfect fit. No seams means fewer leaks and a cleaner look for your home.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      <div class="service-card" onclick="openModal()">
+        <img src="images/soffit-facia-seamless.jpg" alt="Soffit & Fascia Replacement" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-body">
+          <div class="service-tag">Full Service</div>
+          <h3>Soffit &amp; Fascia Replacement</h3>
+          <p>Protect your roofline with durable aluminum materials installed right the first time.</p>
+          <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <h3>Soffit &amp; Fascia Replacement</h3>
-        <p>Protect your roofline with professional soffit and fascia installation. We repair damage and upgrade to durable aluminum materials.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      <div class="service-card" onclick="openModal()">
+        <img src="images/screen-aluminum-enclosure.jpg" alt="Aluminum Work" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-body">
+          <div class="service-tag">Custom</div>
+          <h3>Aluminum Work &amp; Enclosures</h3>
+          <p>Panels, screen enclosures, trim, and custom aluminum products built for Florida homes.</p>
+          <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <h3>Aluminum Work</h3>
-        <p>Comprehensive aluminum fabrication and installation including panels, trim work, and custom aluminum products for residential properties.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="service-card" onclick="openModal()">
+        <img src="images/gutter-guards.jpg" alt="Gutter Guards" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-body">
+          <div class="service-tag">Low Maintenance</div>
+          <h3>Gutter Guards &amp; Covers</h3>
+          <p>Stop climbing that ladder. Keep gutters clear year-round with professional guard installation.</p>
+          <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <h3>Roofing &amp; Repairs</h3>
-        <p>From storm damage repairs to full roof replacements. Anthony goes above and beyond — including checking on your home before rain storms.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/><path d="M5 15l7 7 7-7"/></svg>
+      <div class="service-card" onclick="openModal()">
+        <img src="images/seamless-gutter-mvp-4.jpg" alt="Roofing & Repairs" loading="lazy" />
+        <div class="service-card-overlay"></div>
+        <div class="service-card-body">
+          <div class="service-tag">Storm Ready</div>
+          <h3>Roofing &amp; Storm Repairs</h3>
+          <p>Anthony checks your home before storms hit. Fast response, honest assessment, fair price.</p>
+          <div class="service-cta">Get a Free Quote <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <h3>Gutter Guards &amp; Covers</h3>
-        <p>Keep gutters clear of debris with professional gutter guard installation. Reduce maintenance and extend the life of your gutter system.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>Inspections &amp; Maintenance</h3>
-        <p>Proactive inspections to catch problems early. Anthony personally checks your property and communicates everything he finds — no surprises.</p>
       </div>
     </div>
   </div>
