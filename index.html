@@ -215,20 +215,43 @@
 
     /* ── WHY US ── */
     .why { padding: 96px 0; }
-    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .why-image {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dk) 100%);
-      border-radius: 20px; padding: 48px 36px; color: var(--white); position: relative; overflow: hidden;
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-photo-card {
+      position: relative; border-radius: 20px; overflow: hidden; min-height: 520px;
     }
-    .why-image::after {
-      content: ''; position: absolute; right: -40px; bottom: -40px;
-      width: 200px; height: 200px; border-radius: 50%;
-      background: rgba(255,255,255,.06);
+    .why-photo-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     }
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
-    .stat-box { background: rgba(255,255,255,.12); border-radius: 12px; padding: 20px; text-align: center; }
-    .stat-num { font-size: 2.2rem; font-weight: 900; color: var(--gold); line-height: 1; }
-    .stat-lbl { font-size: .82rem; opacity: .8; margin-top: 6px; }
+    .why-photo-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,15,40,.96) 0%, rgba(5,15,40,.55) 45%, rgba(5,15,40,.15) 100%);
+    }
+    .why-photo-card-logo {
+      position: absolute; top: 24px; left: 50%; transform: translateX(-50%);
+      width: 90px; height: 90px; border-radius: 50%;
+      background: #fff; padding: 6px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,.35);
+    }
+    .why-photo-card-logo img {
+      position: static; width: 100%; height: 100%; object-fit: contain; border-radius: 50%;
+    }
+    .why-photo-card-body {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 32px 28px;
+    }
+    .why-photo-card-quote {
+      font-size: .92rem; color: rgba(255,255,255,.75); line-height: 1.65;
+      font-style: italic; margin-bottom: 28px; padding-left: 14px;
+      border-left: 3px solid var(--gold);
+    }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-box {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px; padding: 18px 16px; text-align: center;
+      backdrop-filter: blur(6px);
+    }
+    .stat-num { font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .stat-lbl { font-size: .78rem; color: rgba(255,255,255,.7); margin-top: 5px; }
     .why-points { display: flex; flex-direction: column; gap: 28px; }
     .why-point { display: flex; gap: 16px; align-items: flex-start; }
     .why-point-icon {
@@ -815,25 +838,31 @@
 <section class="why" id="why-us">
   <div class="container">
     <div class="why-inner">
-      <div class="why-image">
-        <img src="images/logo-store.png" alt="Florida's Finest Gutters & Aluminum" style="width:100%;max-width:280px;display:block;margin:0 auto 20px;border-radius:50%;" />
-        <p style="margin-top:4px;opacity:.8;font-size:.95rem;line-height:1.7;text-align:center;">Over years of serving Florida homeowners, we've earned a reputation for doing what we say, at a fair price, and leaving your property clean.</p>
-        <div class="stat-grid">
-          <div class="stat-box">
-            <div class="stat-num">5.0</div>
-            <div class="stat-lbl">Google Rating</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">18+</div>
-            <div class="stat-lbl">5-Star Reviews</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">100%</div>
-            <div class="stat-lbl">Job Satisfaction</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">Free</div>
-            <div class="stat-lbl">Estimates</div>
+      <div class="why-photo-card">
+        <img src="images/seamless-soffit-facia-mvp.jpg" alt="Florida's Finest Gutters completed job" loading="lazy" />
+        <div class="why-photo-card-overlay"></div>
+        <div class="why-photo-card-logo">
+          <img src="images/logo-store.png" alt="Florida's Finest Gutters & Aluminum" />
+        </div>
+        <div class="why-photo-card-body">
+          <p class="why-photo-card-quote">"Doing what we say, at a fair price, and leaving your property clean — every single time."</p>
+          <div class="stat-grid">
+            <div class="stat-box">
+              <div class="stat-num">5.0</div>
+              <div class="stat-lbl">Google Rating</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">18+</div>
+              <div class="stat-lbl">5-Star Reviews</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-lbl">Satisfaction</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">Free</div>
+              <div class="stat-lbl">Estimates</div>
+            </div>
           </div>
         </div>
       </div>
